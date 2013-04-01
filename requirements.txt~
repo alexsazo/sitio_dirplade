@@ -1,0 +1,4 @@
+Django==1.5
+django-crispy-forms==1.2.0
+django-extensions==1.0.0
+South==0.7.6

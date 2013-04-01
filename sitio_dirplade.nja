@@ -1,0 +1,6 @@
+{
+  "venv": "/home/javier/workspace_dirplade/bin/python", 
+  "name": "sitio_dirplade", 
+  "license": "GNU General Public License v3", 
+  "description": "Aplicaci\u00f3n web para la gestion de los ciclos de calidad de la Universidad Adventista de Chile"
+}

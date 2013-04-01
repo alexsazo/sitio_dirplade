@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ciclos de calidad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Javier Huerta">
+
+    <!-- Le styles -->
+    <link href="C:/Users/Javier/Desktop/Javier/Trabajo/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="C:/Users/Javier/Desktop/Javier/Trabajo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="C:/Users/Javier/Desktop/Javier/Trabajo/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    
+	<style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 30px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+	  
+	  .img-center {
+        max-width: 200px;
+        padding: 10px 5px 2px;
+        margin: 0 auto 10px;
+        background-color: #fff;
+       
+      }
+      
+    </style>
+       
+  </head>
+
+  <body>
+  
+   <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">DPD UnaCh</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">nombre usuario</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Acerca de</a></li>
+              <li><a href="#contact">Contactanos</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+	
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+		<br> <br> 
+		<div class="well sidebar-nav">
+			<ul class="nav nav-pills nav-stacked">
+				<ul> <li class="nav-header"> Comenzar </ul> 
+				<li><a href="#">Introducción</a></li>
+				<li><a href="#">Diagrama de orientación</a></li>
+				<ul class="nav-header">Inputs</ul>
+				<li><a href="#">Tabla 1</a></li>
+				<li><a href="#">Tabla 2</a></li>
+				<li><a href="#">Tabla 3</a></li>
+				<ul class="nav-header">Proceso</ul>
+				<li><a href="#">FODA</a></li>
+				<ul class="nav-header">Outputs</ul>
+				<li><a href="#">Tabla 1</a></li>
+				<li><a href="#">Tabla 2</a></li>  
+			</ul>
+		</div>
+	</div>
+    <div class="span9">
+      <!--Body content-->
+	  <br> <br>
+		<div class="container-narrow">	  
+		
+			
+            
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <blockquote>
+		<h4>TABLA N°1: <small> DESAFIOS PROPIOS DE LA CARRERA QUE QUEDARON PENDIENTES EN EL CICLO DE CALIDAD DEL AÑO 2012 </small> </h4>
+		</blockquote>
+	  </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">       	
+			<li> Estos desafíos deben estar enumerados en las debilidades del FODA para que pasen a ser parte de su plan de trabajo 2013. </li>		    
+		</div>
+    </div>
+  </div>
+  
+  <table id="tabla" class = "table table-bordered">
+	<tr>
+		<td><select id="sel1">
+			<option> 1
+			<option> 2
+			<option> 3
+		</td>
+		<td>	<input type="text" id="t11" value="t11">	</td>
+		<td>	<input type="text" id="t12" value="t12"></td>
+	</tr>
+	<tr>
+		<td><select id="sel2">
+			<option>1
+			<option>2
+			<option>3
+		</td>
+		<td> <input type="text" id="t21" value="t21"> </td>
+		<td> <input type="text" id="t22" value="t22"> </td>
+	</tr>
+</table>
+<br>
+<input type="button" value="Agregar" onclick="agregar()">
+<input type="button" value="Borrar ultima" onclick="borrarUltima()">
+  
+   
+		</div> <!-- /container-narrow -->
+    </div>
+	</div>
+  <hr>
+		<div class="footer">
+			<p>&copy; Informática UnACh</p>
+		</div>
+</div> <!-- /conteniner-fluid -->
+	
+    
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="C:/Users/Javier/Desktop/Javier/Trabajo/bootstrap/js/bootstrap.min.js"></script>    
+	
+<script>
+	var contLin = 3;
+function agregar() {
+	var tr, td;
+
+	tr = document.all.tabla.insertRow();
+	td = tr.insertCell();
+	td.innerHTML = "<select id='sel" + contLin + "'>" +
+	               "<option>1" +
+	               "<option>2" +
+	               "<option>3";
+	td = tr.insertCell();
+	td.innerHTML = "<input type='text' id='t" + contLin + "1' value='t" + contLin + "1'>";
+	td = tr.insertCell();
+	td.innerHTML = "<input type='text' id='t" + contLin + "2' value='t" + contLin + "2'>";
+	contLin++;
+}
+function borrarUltima() {
+	ultima = document.all.tabla.rows.length - 1;
+	document.all.tabla.deleteRow(ultima);
+	contLin--;
+}
+</script>
+
+  </body>
+</html>
